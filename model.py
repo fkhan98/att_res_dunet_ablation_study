@@ -143,9 +143,9 @@ def decoder1(inputs, skip_connections):
 
         print(f"Applying dropout in decoder1 up layer {i + 1}")
         if i < 2:
-            x = conv_block(x, f, drop_out=0.3)
+            x = conv_block(x, f, drop_out=0)
         else:
-            x = conv_block(x, f, drop_out=0.1)
+            x = conv_block(x, f, drop_out=0)
 
     return x
 
@@ -183,9 +183,9 @@ def decoder2(inputs, skip_1, skip_2):
 
         print(f"Applying dropout in decoder2 up layer {i + 1}")
         if i < 2:
-            x = conv_block(x, f, drop_out=0.5)
+            x = conv_block(x, f, drop_out=0)
         else:
-            x = conv_block(x, f, drop_out=0.3)
+            x = conv_block(x, f, drop_out=0)
 
     return x
 
